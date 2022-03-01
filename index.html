@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Random Bird Page</title>
+<script type="text/javascript">
+  var imageURLs = [
+       "https://projstorage.blob.core.windows.net/images/bluejay.jpg"
+     , "https://projstorage.blob.core.windows.net/images/cardinal.jpg"
+     , "https://projstorage.blob.core.windows.net/images/chickadee.jpg"
+	 , "https://projstorage.blob.core.windows.net/images/goldfinch.jpg"
+	 , "https://projstorage.blob.core.windows.net/images/nuthatch.jpg"
+	 , "https://projstorage.blob.core.windows.net/images/woodpecker.jpg"
+	 ,
+  ];
+  function getImageTag() {
+    var img = '<img src=\"';
+    var randomIndex = Math.floor(Math.random() * imageURLs.length);
+    img += imageURLs[randomIndex];
+    img += '\" alt=\"A random bird.\"/>';
+    return img;
+  }
+</script>
+</head>
+<body>
+<h1> Welcome to my random bird page. Please enjoy a random bird.</h1>
+<script type="text/javascript">
+  document.write(getImageTag());
+</script>
+</body>
+</html>
